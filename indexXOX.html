@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOX</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(92, 164, 205);
+             display: flex;
+             flex-direction: column;            /*  error yazısını alta alır */
+             align-items: center; /*yazıyı ortalar */
+             justify-content: center;
+             height: 50rem;
+             width: 100%;
+        }
+        h1{
+            color: white;
+        }
+       
+         h2{
+            margin-bottom: 5rem;
+            color: red;
+        }
+        .game-container{
+            width: 30rem;
+            height: 30rem;
+            display: grid;
+            grid-template-columns: repeat(3 ,1fr);
+            grid-template-rows: repeat(3 ,1fr);
+            border: 1px solid black;
+        }
+        .block{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            background-color: #fff;
+            user-select: none;
+
+        }
+        #error{
+            font-size: 2.2rem;
+            margin-top: 3rem;
+            letter-spacing: 6px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>X O X</h1>
+    <h2 id="player"></h2>
+    <div class="game-container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+    <p id="error"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
